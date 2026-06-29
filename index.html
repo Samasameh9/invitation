@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Our Wedding</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/OIP (1).jfif"
+      type="image/x-icon"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Great+Vibes&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container 2xl:w-7xl mx-auto">
+      <div class="relative mx-auto top-0 shadow-2xl overflow-hidden">
+        <div
+          class="absolute w-full h-lvh bg-[#E7E4DE] shadow-2xl rounded-md"
+        ></div>
+
+        <div
+          class="absolute inset-0 bg-[#C9BFB1]"
+          id="topFlap"
+          style="clip-path: polygon(0 0, 100% 0, 50% 100%)"
+        ></div>
+
+        <div
+          id="bottomFlap"
+          class="absolute inset-0 bg-[#D2CAC2] z-10"
+          style="clip-path: polygon(0 100%, 100% 100%, 50% 50%)"
+        ></div>
+
+        <div
+          id="leftFlap"
+          class="absolute inset-0 bg-[#D2CAC2] z-10"
+          style="clip-path: polygon(0 0, 0 100%, 50% 50%)"
+        ></div>
+
+        <div
+          id="rightFlap"
+          class="absolute inset-0 bg-[#D2CAC2] z-10"
+          style="clip-path: polygon(100% 0, 100% 100%, 50% 50%)"
+        ></div>
+        <div>
+          <div
+            id="clickedButton"
+            class="absolute cursor-pointer border-2 z-50 border-[#CAC1B3] flex justify-center items-center rounded-3xl w-[65px] h-[65px] bg-[#D2CAC2] top-[45%] right-[45%] sm:right-[47%]"
+          >
+            <div
+              class="border-2 border-[#CAC1B3] rounded-full overflow-hidden w-[50px] h-[50px]"
+            >
+              <img
+                src="./src/assets/OIP (1).jfif"
+                class="w-full h-full object-cover rounded-full z-40"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            id="card"
+            class="flex flex-col justify-center relative z-30 items-center h-lvh font-bold text-[#a69277] top-25"
+          >
+            <h1 class="text-3xl">This invitation exclusive for you</h1>
+            <h2 class="font-bold text-2xl">Hesham & Hadeel</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
