@@ -403,6 +403,12 @@
   .\!w-2\.5 {
     width: calc(var(--spacing) * 2.5) !important;
   }
+  .w-1 {
+    width: var(--spacing);
+  }
+  .w-1\/2 {
+    width: calc(1 / 2 * 100%);
+  }
   .w-\[50px\] {
     width: 50px;
   }
