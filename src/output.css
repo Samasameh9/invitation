@@ -482,6 +482,9 @@
   .border-white {
     border-color: var(--color-white);
   }
+  .bg-\[\#\#F9C480\] {
+    background-color: ##F9C480;
+  }
   .bg-\[\#605a4e\] {
     background-color: #605a4e;
   }
@@ -500,11 +503,23 @@
   .bg-\[\#F5E7D8\] {
     background-color: #F5E7D8;
   }
+  .bg-\[\#F9C480\] {
+    background-color: #F9C480;
+  }
+  .bg-\[\#b6aea3\] {
+    background-color: #b6aea3;
+  }
   .bg-\[\#c7b186\] {
     background-color: #c7b186;
   }
   .bg-\[\#d2d0cc\] {
     background-color: #d2d0cc;
+  }
+  .bg-\[\#e6ddd2\] {
+    background-color: #e6ddd2;
+  }
+  .bg-\[\#e7e5e2\] {
+    background-color: #e7e5e2;
   }
   .bg-amber-500 {
     background-color: var(--color-amber-500);
