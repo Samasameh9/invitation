@@ -17,12 +17,13 @@
       rel="stylesheet"
     />
   </head>
-  <body>
-    <div class="container 2xl:w-7xl mx-auto w-sm">
-      <div class="relative mx-auto top-0 shadow-2xl overflow-hidden">
-        <div
-          class="absolute w-full h-lvh bg-[#E7E4DE] shadow-2xl rounded-md"
-        ></div>
+  <body >
+    <div class="container 2xl:w-7xl mx-auto">
+      <div
+        class="relative  mx-auto bg-[#E7E4DE] top-0 shadow-2xl overflow-hidden"
+        id="envelope"
+      >
+        <div class="absolute w-full shadow-2xl rounded-md"></div>
 
         <div
           class="absolute inset-0 bg-[#C9BFB1]"
@@ -50,7 +51,7 @@
         <div class="flex justify-center items-center">
           <div
             id="clickedButton"
-            class="absolute cursor-pointer border-2 z-50 border-[#CAC1B3] flex justify-center items-center rounded-3xl w-[65px] h-[65px] bg-[#D2CAC2]   "
+            class="absolute cursor-pointer border-2 z-50 border-[#CAC1B3] flex justify-center items-center rounded-3xl w-[65px] h-[65px] bg-[#D2CAC2]"
           >
             <div
               class="border-2 border-[#CAC1B3] rounded-full overflow-hidden w-[50px] h-[50px]"
@@ -71,6 +72,21 @@
           </div>
         </div>
       </div>
+      <div  id="mainContent" class="hidden relative" >
+      
+          <img src="./src/assets/weeding.png" class="w-full" alt="weeding place" />
+         <div class="my-5">
+          <div class="flex justify-center text-[#a69277] font-bold border ">
+            <h2 class="text-3xl border ">Date for wedding</h2>
+          </div>
+          <img src="./src/assets/clock.png" class="w-full" alt="clock" />
+          <div class="flex justify-center bg-[#F3E6D6]">
+            <h3 class="text-3xl text-[#a69277] font-bold  ">16.10.2026</h3>
+          </div>
+       
+      </div>
+        </div>
+      
     </div>
     <script src="./js/index.js"></script>
   </body>

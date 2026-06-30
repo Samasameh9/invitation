@@ -1,6 +1,6 @@
 @import "tailwindcss";
-body{
-      font-family: "Great Vibes", cursive;
+body {
+  font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -15,7 +15,6 @@ body{
   transition: transform 1s ease;
   transform-style: preserve-3d;
   backface-visibility: hidden;
-
 }
 #topFlap {
   transform-origin: top;
@@ -53,18 +52,16 @@ body{
   transition-delay: 1.2s;
 }
 #card {
-  
   opacity: 1;
   transition: all 0.5s ease 0.6s;
   transform: scale(1);
 }
 .open #card {
-
- transform: scale(0);
+  transform: scale(0);
   opacity: 0;
 }
 #clickedButton {
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 
 .open #clickedButton {
