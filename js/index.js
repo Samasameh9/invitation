@@ -9,4 +9,5 @@
   envelope.classList.add("hidden");
   main.classList.remove("hidden");
   main.classList.add("block");
+
 }, { once: true });
