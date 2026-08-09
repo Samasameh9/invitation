@@ -18,7 +18,6 @@ button.addEventListener("click", () => {
   icon.classList.add("fa-pause");
 });
 
-
 bottomFlap.addEventListener(
   "transitionend",
   () => {
@@ -52,7 +51,6 @@ mapButton.addEventListener("click", () => {
   );
 });
 const targetDate = new Date(2026, 9, 16, 19, 0, 0).getTime();
-
 
 function updateCountdown() {
   const now = new Date().getTime();
@@ -123,12 +121,83 @@ setInterval(() => {
 }, 1000);
 //=================
 //kids message
-const openMessage=document.getElementById("openMessage")
-const kidsMessage=document.getElementById("kidsMessage")
+const openMessage = document.getElementById("openMessage");
+const kidsMessage = document.getElementById("kidsMessage");
 
-openMessage.addEventListener("click",()=>{
+openMessage.addEventListener("click", () => {
   kidsMessage.classList.toggle("hidden");
   kidsMessage.classList.toggle("flex");
+});
+//=================================
+//send message
+// async function sendMessage(e) {
+//   e.preventDefault()
+//   const userName = document.getElementById("userName").value;
+//   const userMessage = document.getElementById("userMessage").value;
 
-  
-})
+//   try {
+//     const result = await fetch(
+//       "https://weeding-invitattion.vercel.app/user",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify({
+//           userName,
+//           userMessage,
+//         }),
+//       }
+//     );
+
+//     const data = await result.json();
+
+//     if (!result.ok) {
+//       throw new Error(data.message || "Failed to send message");
+//     }
+
+//     console.log("Success:", data);
+//     alert("Message sent successfully ❤️");
+
+//   } catch (error) {
+//     console.error("Error:", error);
+//     alert("Failed to send message");
+//   }
+// }
+const form = document.getElementById("messageForm");
+
+form.addEventListener("submit", sendMessage);
+
+async function sendMessage(e) {
+  e.preventDefault();
+  const userName = document.getElementById("userName").value;
+  const userMessage = document.getElementById("userMessage").value;
+  console.log({ userName, userMessage });
+
+  try {
+    const result = await fetch("https://weeding-invitattion.vercel.app/user", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: userName,
+        message: userMessage,
+      }),
+    });
+
+    const data = await result.json();
+    console.log("Response:", data);
+
+    if (!result.ok) {
+      throw new Error(data.message || "Failed to send message");
+    }
+
+    console.log("Success:", data);
+  document.getElementById("success").classList.remove("hidden")
+  } catch (error) {
+    console.error("Error:", error);
+  document.getElementById("filed").classList.remove("hidden")
+    
+  }
+}
