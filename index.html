@@ -26,7 +26,7 @@
     <div class="container 2xl:w-7xl mx-auto">
       <!-- envelope -->
       <div
-        class="relative  mx-auto bg-[#E5D7C7] top-0 shadow-2xl overflow-hidden"
+        class="relative mx-auto bg-[#E5D7C7] top-0 shadow-2xl overflow-hidden"
         id="envelope"
       >
         <div class="absolute w-full shadow-2xl rounded-md"></div>
@@ -237,6 +237,10 @@
               <p>Seconds</p>
             </div>
           </div>
+          <div id="wedding-message" class="text-2xl hidden">
+            Today is our wedding day
+            <i class="fa-regular fa-heart text-[#a69277]"></i>
+          </div>
         </div>
 
         <!-- color palette -->
@@ -285,14 +289,18 @@
                 placeholder="Your name"
                 class="border-2 border-[#a69277] w-1/2 rounded-2xl px-5 py-2 text-2xl"
                 autocomplete="off"
-                required
               />
+              <p class="text-xl hidden" id="nameError">
+                please write your name before send
+              </p>
               <textarea
                 id="userMessage"
                 placeholder="Your message"
                 class="border-2 border-[#a69277] w-1/2 rounded-2xl py-2 px-5 text-2xl"
-                required
               ></textarea>
+              <p class="text-xl hidden" id="messageError">
+                please write your message before send
+              </p>
               <button
                 type="submit"
                 class="border-2 cursor-pointer text-2xl shadow-2xl p-3 rounded-2xl"
