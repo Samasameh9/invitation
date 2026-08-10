@@ -150,23 +150,19 @@ async function sendMessage(e) {
   const userMessage = document.getElementById("userMessage").value.trim();
   const nameError = document.getElementById("nameError");
   const messageError = document.getElementById("messageError");
-
-   if (userName === "") {
+  let valid = true;
+  if (userName === "") {
     nameError.classList.remove("hidden");
     valid = false;
   } else {
     nameError.classList.add("hidden");
   }
-
-  // Validate message
   if (userMessage === "") {
     messageError.classList.remove("hidden");
     valid = false;
   } else {
     messageError.classList.add("hidden");
   }
-
-  // Don't send request if fields are empty
   if (!valid) {
     return;
   }
@@ -192,6 +188,7 @@ async function sendMessage(e) {
     }
 
     console.log("Success:", data);
+    form.reset();
     document.getElementById("success").classList.remove("hidden");
   } catch (error) {
     console.error("Error:", error);
